@@ -1,0 +1,113 @@
+.header {
+    width: 100%;
+    position: fixed;
+    padding: 0px 15px;
+    min-height: 99px;
+    transition: background 0.5s ease 0s;
+    z-index: 100;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+    &__container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__couple-name {
+      font-size: 24px;
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      align-items: self-start;
+      font-weight: bold;
+
+      span {
+        margin: 0;
+      }
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+
+      .menu__icon--mobile {
+        display: none;
+        /* Add your mobile menu icon styles here */
+      }
+    }
+
+    .menu__wrapper {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .menu__item {
+        margin-left: 20px;
+
+        .menu-dropdown {
+          position: relative;
+
+          .menu-dropdown__title {
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            .menu-dropdown__icon {
+              width: 10px;
+              height: 6px;
+              fill: #605f63;
+              margin-left: 5px;
+            }
+          }
+
+          .menu-dropdown__list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1;
+
+            &.-active {
+              display: block;
+            }
+
+            .message-dropdown__item {
+              font-size: 14px;
+              margin: 5px 0;
+              display: flex;
+              align-items: center;
+
+              a {
+                color: #333;
+                text-decoration: none;
+              }
+
+              .language-flag {
+                /* Add styles for language flags here */
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .menu-dropdown__list {
+            display: block;
+          }
+        }
+      }
+    }
+  }
