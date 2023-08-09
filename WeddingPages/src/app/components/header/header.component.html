@@ -1,93 +1,58 @@
 <p>header works!</p>
-<header class="header">
-    <div class="header__container">
-        <a data-testid="CoupleNameHeader" class="header__couple-name notranslate" href="/">
-            <span>S</span>
-            <span>&amp;</span>
-            <span>M</span>
-        </a>
-        <nav class="menu">
-            <button class="menu__icon--mobile">
-                <span class="menu__icon"></span>
-            </button>
-            <ul class="menu__wrapper">
-                <li class="menu__item">
-                    <div class="menu-dropdown">
-                        <a class="menu-dropdown__title" href="#">
-                            Páginas
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 6" class="menu-dropdown__icon">
-                                <path fill="#605F63" fill-rule="evenodd"
-                                    d="M5.95.335l4.717 4.912a.302.302 0 010 .416.274.274 0 01-.4 0L5.75.961 1.234 5.663a.274.274 0 01-.4 0 .303.303 0 01-.084-.207c0-.074.027-.15.084-.207L5.55.337a.274.274 0 01.4-.002z">
-                                </path>
-                            </svg>
-                        </a>
-                        <ul class="menu-dropdown__list">
-                            <li class="message-dropdown__item -active"><a href="/home" aria-current="page">Página Inicial</a></li>
-                            <li class="message-dropdown__item"><a href="/about">Nossa história</a></li>
-                            <li class="message-dropdown__item"><a href="/messages">Mensagens</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu__item">
-                    <div class="menu-dropdown">
-                        <a class="menu-dropdown__title" href="#">
-                            Presentes
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 6" class="menu-dropdown__icon">
-                                <path fill="#605F63" fill-rule="evenodd"
-                                    d="M5.95.335l4.717 4.912a.302.302 0 010 .416.274.274 0 01-.4 0L5.75.961 1.234 5.663a.274.274 0 01-.4 0 .303.303 0 01-.084-.207c0-.074.027-.15.084-.207L5.55.337a.274.274 0 01.4-.002z">
-                                </path>
-                            </svg>
-                        </a>
-                        <ul class="menu-dropdown__list">
-                            <li class="message-dropdown__item"><a href="/pages/gifts">Lista de presentes virtuais</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu__item">
-                    <div class="menu-dropdown">
-                        <a class="menu-dropdown__title" href="#">
-                            Confirmar presença
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 6" class="menu-dropdown__icon">
-                                <path fill="#605F63" fill-rule="evenodd"
-                                    d="M5.95.335l4.717 4.912a.302.302 0 010 .416.274.274 0 01-.4 0L5.75.961 1.234 5.663a.274.274 0 01-.4 0 .303.303 0 01-.084-.207c0-.074.027-.15.084-.207L5.55.337a.274.274 0 01.4-.002z">
-                                </path>
-                            </svg>
-                        </a>
-                        <ul class="menu-dropdown__list">
-                            <li class="message-dropdown__item"><a href="/pages/29701828">Casamento</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="menu__item">
-                    <div class="menu-dropdown">
-                        <a class="menu-dropdown__title--multi-language menu-dropdown__title" href="#">
-                            Idioma
-                            <span class="language-flag"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 6" class="menu-dropdown__icon">
-                                <path fill="#605F63" fill-rule="evenodd"
-                                    d="M5.95.335l4.717 4.912a.302.302 0 010 .416.274.274 0 01-.4 0L5.75.961 1.234 5.663a.274.274 0 01-.4 0 .303.303 0 01-.084-.207c0-.074.027-.15.084-.207L5.55.337a.274.274 0 01.4-.002z">
-                                </path>
-                            </svg>
-                        </a>
-                        <ul class="menu-dropdown__list">
-                            <li class="message-dropdown__item"><span class="language-flag"></span>Português</li>
-                            <li class="message-dropdown__item"><span class="language-flag"></span>Inglês</li>
-                            <li class="message-dropdown__item"><span class="language-flag"></span>Espanhol</li>
-                            <li class="message-dropdown__item"><span class="language-flag"></span>Francês</li>
-                            <li class="message-dropdown__item"><span class="language-flag"></span>Alemão</li>
-                            <li class="message-dropdown__item">
-                                <span class="language-flag"></span>Powered by
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 11">
-                                    <g fill="#2C2C2C" fill-rule="evenodd">
-                                        <path d="">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header com Dropdowns</title>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      S&M
     </div>
-</header>
+    <nav class="menu">
+      <div class="dropdown">
+        <a href="#" class="dropdown-trigger">Páginas</a>
+        <div class="dropdown-content">
+          <a href="/">Página Inicial</a>
+          <a href="about">Nossa História</a>
+          <a href="messages">Mensagens</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-trigger">Presentes</a>
+        <div class="dropdown-content">
+          <a href="gifts">Lista de Presente</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-trigger">Confirmar Presença</a>
+        <div class="dropdown-content">
+          <a href="attendance">Casamento</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropdown-trigger">Idioma</a>
+        <div class="dropdown-content">
+          <a href="#">Português</a>
+          <a href="#">Espanhol</a>
+          <a href="#">Francês</a>
+          <a href="#">Alemão</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <script>
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+
+    dropdownTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const dropdown = trigger.closest('.dropdown');
+        dropdown.classList.toggle('open');
+      });
+    });
+  </script>
+  <!-- Seu conteúdo aqui -->
+</body>
+</html>

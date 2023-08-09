@@ -1,113 +1,97 @@
+// Importando fontes ou outros estilos, se necessário
+
+// Definindo variáveis comuns
+$primary-color: #007bff;
+$secondary-color: #333;
+
+// Estilos para o header
 .header {
-    width: 100%;
-    position: fixed;
-    padding: 0px 15px;
-    min-height: 99px;
-    transition: background 0.5s ease 0s;
-    z-index: 100;
+  display: grid;
+  grid-template-columns: auto 1fr auto; // Colunas para o logo, menu e espaço vazio
+
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem;
+
+  .logo {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0);
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
 
-    &__container {
-      max-width: 1200px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    img {
+      max-width: 100px;
+      height: auto;
+      margin-right: 1rem;
     }
+  }
 
-    &__couple-name {
-      font-size: 24px;
-      text-decoration: none;
-      color: #333;
-      display: flex;
-      align-items: self-start;
-      font-weight: bold;
+  .menu {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
 
-      span {
-        margin: 0;
+    .dropdown {
+      position: relative;
+      display: inline-block;
+
+      &-trigger {
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          display: inline-table;
+          width: 10px;
+          height: 10px;
+          background-image: url('../../../../src/assets/images/arrow-down.png');
+          background-size: cover;
+          margin-left: 5px;
+          transition: transform 0.3s;
+        }
       }
-    }
 
-    .menu {
-      display: flex;
-      align-items: center;
+      &.open .dropdown-trigger::after {
+        transform: rotate(180deg);
+        background-image: url('../../../../src/assets/images/arrow-up.png');
+        background-size: cover;
+        transition: 0.3s;
+      }
 
-      .menu__icon--mobile {
+      &:hover {
+        background-color: .3;
+      }
+
+      .dropdown-content {
+        position: absolute;
         display: none;
-        /* Add your mobile menu icon styles here */
+        top: 73px;
+        width: 254px;
+        max-height: calc(100vh - 100px);
+        border: 1px solid rgba(178, 74, 133, 0.2);
+        animation: 0.3s ease 0s 1 normal forwards running gRWHUs;
+        -webkit-box-align: center;
+        overflow: hidden auto;
+        background-color: white;
+        right: 32px;
+        min-width: fit-content;
+
+        a {
+          display: block;
+          padding: 0.5rem 1rem;
+          color: --base-color;
+          text-decoration: none;
+
+          &:hover {
+            background-color: darken($secondary-color, 20%);
+          }
+        }
       }
-    }
 
-    .menu__wrapper {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      .menu__item {
-        margin-left: 20px;
-
-        .menu-dropdown {
-          position: relative;
-
-          .menu-dropdown__title {
-            font-size: 16px;
-            color: #333;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-
-            .menu-dropdown__icon {
-              width: 10px;
-              height: 6px;
-              fill: #605f63;
-              margin-left: 5px;
-            }
-          }
-
-          .menu-dropdown__list {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            z-index: 1;
-
-            &.-active {
-              display: block;
-            }
-
-            .message-dropdown__item {
-              font-size: 14px;
-              margin: 5px 0;
-              display: flex;
-              align-items: center;
-
-              a {
-                color: #333;
-                text-decoration: none;
-              }
-
-              .language-flag {
-                /* Add styles for language flags here */
-              }
-            }
-          }
-        }
-
-        &:hover {
-          .menu-dropdown__list {
-            display: block;
-          }
-        }
+      &:hover .dropdown-content {
+        display: block;
       }
     }
   }
+}
