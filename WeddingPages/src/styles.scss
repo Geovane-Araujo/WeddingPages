@@ -75,11 +75,16 @@
 //         grid-template-columns: repeat(2, 1fr);
 //     }
 // }
+body, html{
+    padding: 0;
+    margin: 0;
+}
 
 :root {
     --base-color: #B24A85;
     --detail-color: #FAFAF6;
     --text-general-color: #223057;
+    --height-header: 99px;
 
 
 }

@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header com Dropdowns</title>
-</head>
+
 <body>
   <header class="header">
     <div class="logo">
@@ -12,14 +6,21 @@
     </div>
     <nav class="menu">
       <div class="dropdown">
-        <a class="dropdown-trigger">Páginas</a>
+        <ng-container *ngFor="let menu of dropdownMenus">
+          <app-dropdown [dropdownTitle]="menu.dropdownTitle" [dropdownContent]="menu.dropdownContent"></app-dropdown>
+        </ng-container>
+
+        <!-- <app-dropdown dropdownTitle="Presentes"></app-dropdown>
+        <app-dropdown dropdownTitle="Confirmar Presença"></app-dropdown>
+        <app-dropdown dropdownTitle="Idiomas"></app-dropdown> -->
+        <!-- <a class="dropdown-trigger">Páginas</a>
         <div class="dropdown-content">
           <a href="/">Página Inicial</a>
           <a href="about">Nossa História</a>
           <a href="messages">Mensagens</a>
-        </div>
+        </div> -->
       </div>
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <a class="dropdown-trigger">Presentes</a>
         <div class="dropdown-content">
           <a href="gifts">Lista de Presente</a>
@@ -39,7 +40,7 @@
           <a href="#">Francês</a>
           <a href="#">Alemão</a>
         </div>
-      </div>
+      </div> -->
     </nav>
   </header>
   <script>
@@ -76,4 +77,3 @@
     });
   </script>
 </body>
-</html>

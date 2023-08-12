@@ -6,16 +6,19 @@ $secondary-color: #333;
 
 /* Estilos para o header */
 .header {
-  display: grid;
-  grid-template-columns: auto 1fr auto; // Colunas para o logo, menu e espaço vazio
-  background-color: $primary-color;
+  display: flex;
+  height: 99px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
   color: white;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 /* Estilos do Logotipo */
 .logo {
-  font-size: 22px;
+  font-size: 35px;
   font-family: Montserrat-Medium;
   color: white;
   text-decoration: none;
@@ -23,78 +26,6 @@ $secondary-color: #333;
   align-items: center;
 }
 
-/* Estilos do Dropdown */
-.dropdown.open .dropdown-content {
-  display: block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 73px;
-  width: 254px;
-  max-height: calc(100vh - 100px);
-  border: 1px solid rgba(178, 74, 133, 0.2);
-  animation: 0.3s ease 0s 1 normal forwards running gRWHUs;
-  background-color: white;
-  right: 32px;
-  min-width: fit-content;
-  overflow: hidden auto;
-
-  a {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: $secondary-color;
-    text-decoration: none;
-
-    &:hover {
-      background-color: darken($secondary-color, 20%);
-    }
-  }
-}
-
-/* Estilos do Dropdown Trigger */
-.dropdown-trigger {
-  color: white;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    display: inline-table;
-    width: 10px;
-    height: 10px;
-    background-image: url('../../../../src/assets/images/arrow-down.png');
-    background-size: cover;
-    margin-left: 5px;
-    transition: transform 0.3s;
-  }
-}
-
-.dropdown.open .dropdown-trigger::after {
-  transform: rotate(180deg);
-  background-image: url('../../../../src/assets/images/arrow-up.png');
-  background-size: cover;
-  transition: 0.3s;
-}
-
-.dropdown:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos do Menu */
-.menu {
+.dropdown {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-
-  .dropdown {
-    position: relative;
-    display: flex;
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
 }

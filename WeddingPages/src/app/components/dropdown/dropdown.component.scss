@@ -1,0 +1,30 @@
+.dropdown {
+    margin: 0 16px;
+    font-size: 22px;
+    display: block;
+
+    .dropdown-title {
+        cursor: pointer;
+        color: var();
+        display: none;
+    }
+
+    .dropdown-content {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background: transparent;
+        color: rgb(255, 255, 255);
+        height: 24px;
+
+    }
+    .arrow-icon {
+    /* Adicione estilos para a seta, como um ícone de seta do FontAwesome */
+    /* Exemplo usando FontAwesome: */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078"; /* Código unicode da seta desejada */
+    margin-right: 5px; /* Espaçamento entre o ícone e o título */
+}
+
+}

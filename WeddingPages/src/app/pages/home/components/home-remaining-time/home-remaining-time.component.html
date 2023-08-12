@@ -1,5 +1,44 @@
-<p>home-remaining-time works!</p>
-contagem regresssiva para o grande dia
+<body>
+  <div data-testid="Countdown" class="countdown">
+    <h2 data-testid="CountdownMessage" class="countdown__title">Contagem regressiva para o grande dia</h2>
+    <div class="sc-OFGBB bcucde countdown__flipper">
+      <!-- Aqui você pode deixar as divs e elementos que já existem -->
+      <!-- Substitua os valores dos elementos com a lógica da contagem regressiva -->
+      <!-- Certifique-se de usar JavaScript para atualizar os valores -->
+    </div>
+  </div>
+
+  <!-- Aqui você pode adicionar um script para lidar com a contagem regressiva -->
+  <script>
+    // Exemplo de lógica para atualizar os valores da contagem regressiva
+    function updateCountdown() {
+      // Substitua esses valores com sua lógica de contagem regressiva real
+      const daysElement = document.querySelector('.flipper__card:nth-child(1) .irjCoP');
+      const hoursElement = document.querySelector('.flipper__card:nth-child(2) .irjCoP');
+      const minutesElement = document.querySelector('.flipper__card:nth-child(3) .irjCoP');
+      const secondsElement = document.querySelector('.flipper__card:nth-child(4) .irjCoP');
+
+      const currentDate = new Date();
+      const targetDate = new Date('2024-01-06'); // Substitua com sua data alvo
+
+      const timeRemaining = targetDate - currentDate;
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      daysElement.textContent = days;
+      hoursElement.textContent = hours;
+      minutesElement.textContent = minutes;
+      secondsElement.textContent = seconds;
+    }
+
+    // Chame a função inicialmente e a cada segundo para atualizar a contagem regressiva
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+
 
 O dia dos nossos Sonhos
 Acompanhem de perto todos os preparativos, confirmem presença e explorem nossa lista de presentes exclusiva.

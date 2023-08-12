@@ -1,0 +1,8 @@
+<div class="dropdown">
+    <a class="dropdown-trigger" (click)="dropdownVisible = !dropdownVisible">{{ dropdownTitle }}</a>
+    <div class="dropdown-content" *ngIf="dropdownVisible">
+        <ng-container *ngFor="let content of dropdownContent">
+            <a [href]="content.path">{{ content.title }}</a>
+        </ng-container>
+    </div>
+</div>

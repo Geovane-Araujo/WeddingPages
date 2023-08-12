@@ -11,13 +11,17 @@ import { MessagesModule } from './pages/messages/messages.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MusicPlayerComponent } from './components/music-player/music-player.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { LoagindScreenComponent } from './components/loagind-screen/loagind-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MusicPlayerComponent
+    MusicPlayerComponent,
+    DropdownComponent,
+    LoagindScreenComponent
   ],
   imports: [
     BrowserModule,
