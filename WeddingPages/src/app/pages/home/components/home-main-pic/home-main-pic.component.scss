@@ -1,6 +1,12 @@
 /* home-main-pic.component.scss */
 
-
+.hero-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-height: calc(56.25vw + 64px);
+    display: flex;
+}
 
 .image-wrapper {
     width: 100%;
@@ -133,11 +139,4 @@
     text-align: center;
     color: var(--coupleName);
     text-transform: uppercase;
-}
-.hero-container{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    max-height: calc(56.25vw + 64px);
-    display: flex;
 }
