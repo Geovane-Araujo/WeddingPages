@@ -2,29 +2,48 @@
     margin: 0 16px;
     font-size: 22px;
     display: block;
+    position: relative;
 
     .dropdown-title {
         cursor: pointer;
         color: var();
-        display: none;
     }
 
     .dropdown-content {
         display: flex;
-        position: relative;
+        position: absolute;
         flex-direction: column;
-        background: transparent;
         color: rgb(255, 255, 255);
-        height: 24px;
+        background: white;
+        white-space: nowrap;
+        padding: 10px;
+        padding-right: 25px;
+        transform: translate(-15px, 10px);
+        font-size: 20px;
+        box-shadow: 2px 3px 3px 0 rgba(178, 74, 133, 0.75);
+
+        .a-content {
+            font-family: Monotype Corsiva;
+            margin: 5px 0;
+            a {
+                text-decoration: none;
+            }
+        }
+
+
+
 
     }
+
     .arrow-icon {
-    /* Adicione estilos para a seta, como um ícone de seta do FontAwesome */
-    /* Exemplo usando FontAwesome: */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f078"; /* Código unicode da seta desejada */
-    margin-right: 5px; /* Espaçamento entre o ícone e o título */
-}
+        /* Adicione estilos para a seta, como um ícone de seta do FontAwesome */
+        /* Exemplo usando FontAwesome: */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f078";
+        /* Código unicode da seta desejada */
+        margin-right: 5px;
+        /* Espaçamento entre o ícone e o título */
+    }
 
 }

@@ -6,6 +6,7 @@ import { HomeRemainingTimeComponent } from './components/home-remaining-time/hom
 import { HomeCarousselComponent } from './components/home-caroussel/home-caroussel.component';
 import { HomeMessagesLinkComponent } from './components/home-messages-link/home-messages-link.component';
 import { HomeRecentPhotosComponent } from './components/home-recent-photos/home-recent-photos.component';
+import { HomeRemainingCountdownComponent } from './components/home-remaining-countdown/home-remaining-countdown.component';
 
 
 
@@ -16,7 +17,8 @@ import { HomeRecentPhotosComponent } from './components/home-recent-photos/home-
     HomeRemainingTimeComponent,
     HomeCarousselComponent,
     HomeMessagesLinkComponent,
-    HomeRecentPhotosComponent
+    HomeRecentPhotosComponent,
+    HomeRemainingCountdownComponent
   ],
   imports: [
     CommonModule

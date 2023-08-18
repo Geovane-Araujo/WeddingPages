@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderService } from './components/header/header.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WeddingPages';
+  constructor(public readonly headerService: HeaderService) {
+
+  }
 }

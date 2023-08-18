@@ -9,6 +9,7 @@ export class HeaderComponent {
   public dropdownMenus = [
     {
       dropdownTitle: "Páginas",
+      dropdownId: "pages",
       dropdownContent: [
         {
           title: "Página Inicial",
@@ -26,6 +27,7 @@ export class HeaderComponent {
     },
     {
       dropdownTitle: "Presentes",
+      dropdownId: "gifts",
       dropdownContent: [
         {
           title: "Lista de Presentes",
@@ -35,6 +37,7 @@ export class HeaderComponent {
     },
     {
       dropdownTitle: "Confirmar Presença",
+      dropdownId: "attendance",
       dropdownContent: [
         {
           title: "Casamento",
@@ -44,6 +47,7 @@ export class HeaderComponent {
     },
     {
       dropdownTitle: "Idiomas",
+      dropdownId: "languages",
       dropdownContent: [
         {
           title: "Lista de Presentes",

@@ -104,5 +104,12 @@ body, html{
     --menu-font-family: 'Montserrat-Regular';
     --title-font-family: 'Montserrat-Medium';
     --name-font-family: 'Didot';
+    --countdown-font-family: 'GreatVibes-Regular';
 
+}
+@font-face{
+    font-family: "GreatVibes-Regular";
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("./assets/GreatVibes-Regular.ttf");
 }
