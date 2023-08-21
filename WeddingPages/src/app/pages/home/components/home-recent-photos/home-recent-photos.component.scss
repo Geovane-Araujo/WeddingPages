@@ -1,0 +1,55 @@
+.album {
+    background: rgb(255, 255, 255);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: unset;
+}
+.recent-photos {
+    padding: 40px 0px 80px;
+}
+
+.recent-photos-title {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.title {
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.text-title {
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 4px;
+    text-align: center;
+    color: var(--title-text-color);
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.recent-photos-grid {
+    max-width: 1140px;
+    margin: 10px auto 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photos {
+    flex: 0 0 calc(25% - 30px);
+    max-width: calc(25% - 30px);
+    align-self: flex-start;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease 0s;
+    padding-bottom: calc(25% - 30px);
+}

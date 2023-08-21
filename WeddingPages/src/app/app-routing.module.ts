@@ -8,7 +8,7 @@ import { MessagesComponent } from './pages/messages/messages.component';
 
 const routes: Routes = [
   { path:"", component: HomeComponent, pathMatch: "full" },
-  { path:"about", component: AboutComponent },
+  { path:"about", component: AboutComponent, pathMatch: "full" },
   { path:"attendance", component: AttendanceComponent },
   { path:"gifts", component: GiftsComponent },
   { path:"messages", component: MessagesComponent }
