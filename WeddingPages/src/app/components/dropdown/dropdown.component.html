@@ -1,4 +1,6 @@
-<div class="dropdown">
+<div class="dropdown" [ngClass]=" {
+    'show-background-header': headerService.positionWindow > 0
+}">
     <a class="dropdown-title" (click)="headerService.headerSelector=dropdownId">{{ dropdownTitle }}</a>
     <div class="dropdown-content" *ngIf="(headerService.headerSelector | async)===dropdownId">
         <div class="a-content" *ngFor="let content of dropdownContent">

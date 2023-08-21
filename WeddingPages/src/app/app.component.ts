@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { HeaderService } from './components/header/header.service';
 
 @Component({
@@ -7,7 +7,6 @@ import { HeaderService } from './components/header/header.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'WeddingPages';
   constructor(public readonly headerService: HeaderService) {
 
   }

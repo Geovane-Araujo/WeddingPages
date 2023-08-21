@@ -1,6 +1,8 @@
-<header class="header">
-  <div class="logo">
-    S&M
+<header class="header" [ngClass]="{
+  'show-background-header': headerService.positionWindow > 0
+}">
+  <div  class="logo">
+    <a href="/">S&M</a>
   </div>
   <nav class="menu">
     <div class="dropdown">

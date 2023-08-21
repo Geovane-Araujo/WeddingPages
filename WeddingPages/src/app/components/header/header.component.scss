@@ -15,6 +15,8 @@ $secondary-color: #333;
   padding: 1rem 6rem;
   position: fixed;
   box-sizing: border-box;
+  transition: all 1s;
+
 }
 
 /* Estilos do Logotipo */
@@ -29,4 +31,20 @@ $secondary-color: #333;
 
 .dropdown {
   display: flex;
+}
+
+.a-content {
+  font-family: Monotype Corsiva;
+  margin: 5px 0;
+  a {
+      text-decoration: none;
+  }
+}
+
+.show-background-header {
+  background-color: white;
+
+    color: #007bff;
+
+
 }
