@@ -1,78 +1,51 @@
-.messages-home {
-    padding: 80px 15px;
-    background-color: white;
+.carousel-container {
+  visibility: visible;
+  display: flex;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  left: 0px;
+  opacity: 1;
+  align-items: stretch;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.main-title {
-    max-width: 1110px;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
+.carousel-item {
+  transform: scale(0.8); // Inicia com uma escala menor
+  perspective: 6000px;
+  width: 500px;
+  height: 100%;
+  overflow: hidden;
+  transform-style: flat;
+  z-index: 87;
+  transform-origin: 50% 50% 0px;
+  left: 1637px;
 }
 
-.title {
-    width: 100%;
-    padding: 20px 15px;
+.carousel-item img {
+  transform: scale(1); // Escala completa para o slide ativo
+  transform: scale(0.8);
+  perspective: 6000px;
+  width: 500px;
+  height: 100%;
+  overflow: hidden;
+  transform-style: flat;
+  z-index: 87;
+  transform-origin: 50% 50% 0px;
 }
 
-.text-title {
-    font-size: 22px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: 4px;
-    text-align: center;
-    color: #223057;
-    font-family: Montserrat-medium;
-    text-transform: uppercase;
-    line-height: 30px;
-}
-
-.main-subtitle {
-    margin: 40px 0px;
-}
-
-.subtitle {
-    width: 100%;
-    min-height: 70px;
-    height: 100%;
-    padding: 20px 15px;
-}
-
-.text-subtitle {
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    letter-spacing: 2px;
-    text-align: center;
-    font-family: Montserrat-Medium;
-    font-style: normal;
-    line-height: 28px;
-    color: #223057;
-    text-transform: uppercase;
-    max-width: 1110px;
-    margin: 0px auto;
-}
-
-.send-message-button {
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 2;
-    letter-spacing: normal;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background: rgb(178, 74, 133);
-    padding: 12px 36px;
-    width: fit-content;
-    box-sizing: border-box;
-    filter: none;
-    transition: all 300ms ease-in-out 0s;
-    text-transform: uppercase;
-    font-family: Montserrat-Regular;
+.active-slide {
+  // width: 500px; /* Largura fixa */
+  // height: 500px; /* Altura fixa */
+  // opacity: 1;
+  // visibility: visible;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
 }

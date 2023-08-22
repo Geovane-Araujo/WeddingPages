@@ -1,3 +1,4 @@
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
@@ -18,10 +19,12 @@ import { HomeRemainingCountdownComponent } from './components/home-remaining-cou
     HomeCarousselComponent,
     HomeMessagesLinkComponent,
     HomeRecentPhotosComponent,
-    HomeRemainingCountdownComponent
+    HomeRemainingCountdownComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SlickCarouselModule,
+
   ]
 })
 export class HomeModule { }

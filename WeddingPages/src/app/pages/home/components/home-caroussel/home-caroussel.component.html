@@ -1,1 +1,5 @@
-<p>home-caroussel works!</p>
+<div class="carousel-container">
+    <div class="carousel-item" *ngFor="let image of currentImages">
+      <img [src]="image" alt="Carousel Image">
+    </div>
+  </div>
