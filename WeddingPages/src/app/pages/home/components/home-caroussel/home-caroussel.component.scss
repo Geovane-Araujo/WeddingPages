@@ -23,18 +23,23 @@
   z-index: 87;
   transform-origin: 50% 50% 0px;
   left: 1637px;
-}
+  transition: all 0.3s;
 
-.carousel-item img {
-  transform: scale(1); // Escala completa para o slide ativo
-  transform: scale(0.8);
-  perspective: 6000px;
-  width: 500px;
-  height: 100%;
-  overflow: hidden;
-  transform-style: flat;
-  z-index: 87;
-  transform-origin: 50% 50% 0px;
+  &:nth-child(2n+1) {
+    transform: scale(0.6);
+  }
+
+  img {
+    transform: scale(1); // Escala completa para o slide ativo
+    transform: scale(0.8);
+    perspective: 6000px;
+    width: 500px;
+    height: 100%;
+    overflow: hidden;
+    transform-style: flat;
+    z-index: 87;
+    transform-origin: 50% 50% 0px;
+  }
 }
 
 .active-slide {
