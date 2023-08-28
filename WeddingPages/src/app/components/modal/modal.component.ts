@@ -7,6 +7,10 @@ import { ModalService } from './modal.service';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
+  public messages = [
+    { content: "Lindo o casal" , author: "Jonas Ewerton"}
+  ];
+
   constructor(public readonly modalService: ModalService) {}
 
   public hideModal(): void {

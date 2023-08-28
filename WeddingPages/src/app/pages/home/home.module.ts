@@ -9,6 +9,7 @@ import { HomeMessagesLinkComponent } from './components/home-messages-link/home-
 import { HomeRecentPhotosComponent } from './components/home-recent-photos/home-recent-photos.component';
 import { HomeRemainingCountdownComponent } from './components/home-remaining-countdown/home-remaining-countdown.component';
 import { ModalModule } from 'src/app/components/modal/modal.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModalModule } from 'src/app/components/modal/modal.module';
   imports: [
     CommonModule,
     SlickCarouselModule,
-    ModalModule
+    ModalModule,
+    RouterModule
   ]
 })
 export class HomeModule { }

@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    padding: 0 160px;
+    align-items: center;
+    justify-content: space-between;
+    height: 126px;
+    width: 100%;
+    border-top: 1px solid var(--base-color);
+    box-sizing: border-box;
+
+    .social-media {
+        display: flex;
+        
+        .logo-facebook, .logo-instagram {
+            border: 1px solid var(--base-color);
+            height: 42px;
+            width: 42px;
+            display: grid;
+            place-items: center;
+            margin-right: 16px;
+        }
+    }
+
+    .description {
+        font-family: var(--base-font-family);
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--content);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo {
+        font-size: 26px;
+        color: var(--base-color);
+    }
+}

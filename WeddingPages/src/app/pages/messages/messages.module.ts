@@ -5,6 +5,8 @@ import { MessagesSummaryComponent } from './component/messages-summary/messages-
 import { MessagesWritingComponent } from './component/messages-writing/messages-writing.component';
 import { MessagesReceivedComponent } from './component/messages-received/messages-received.component';
 
+import { MessagesModule as MessagesModule2 } from '../../components/messages/messages.module';
+
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { MessagesReceivedComponent } from './component/messages-received/message
     MessagesReceivedComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MessagesModule2
   ]
 })
 export class MessagesModule { }
