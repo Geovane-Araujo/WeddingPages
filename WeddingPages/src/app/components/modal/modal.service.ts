@@ -1,11 +1,18 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable, signal, computed } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ModalService {
-  public readonly visible = new BehaviorSubject<any>("");
+  public readonly id = signal<number | null>(null);
+
+  private readonly visibleChanged = computed(() => {
+    if(this.id()) {
+      console.log("Captura dados da nova imagem")
+    } else {
+      console.log("Não faz nada");
+    }
+  })
 
   constructor() { }
 }

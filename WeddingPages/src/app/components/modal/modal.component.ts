@@ -8,4 +8,16 @@ import { ModalService } from './modal.service';
 })
 export class ModalComponent {
   constructor(public readonly modalService: ModalService) {}
+
+  public hideModal(): void {
+    this.modalService.id.set(null);
+  }
+
+  public goToPrevious(): void {
+    this.modalService.id.update(id => id !== null && id !== 0 ? id - 1 : id);
+  }
+
+  public goToNext(): void {
+    this.modalService.id.update(id => id !== null && id !== 10 ? id + 1 : id);
+  }
 }

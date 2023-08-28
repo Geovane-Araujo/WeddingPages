@@ -37,6 +37,6 @@ export class HomeCarousselComponent {
   }
 
   public showImage(id: number): void {
-    this.modalService.visible.next(id)
+    this.modalService.id.set(id)
   }
 }
