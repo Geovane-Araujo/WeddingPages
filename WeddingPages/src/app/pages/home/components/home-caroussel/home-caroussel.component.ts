@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalService } from 'src/app/components/modal/modal.service';
 
 @Component({
   selector: 'app-home-caroussel',
@@ -6,25 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-caroussel.component.scss']
 })
 export class HomeCarousselComponent {
-  images: string[] = [
-    // '../../../assets/images/1.jpeg',
-    '../../../assets/images/2.jpeg',
-    // '../../../assets/images/3.jpeg',
-    // '../../../assets/images/4.jpeg',
-    '../../../assets/images/5.jpeg',
-    '../../../assets/images/6.jpeg',
-    '../../../assets/images/7.jpeg',
-    '../../../assets/images/9.jpeg',
-    '../../../assets/images/10.jpeg',
-    '../../../assets/images/11.jpeg',
-    // '../../../assets/images/12.jpeg'
-  ];
-  currentImages: string[] = [];
+  images: number[] = [ 2, 5, 6, 7, 9, 10, 11];
+  currentImages: number[] = [];
   currentIndex: number = 0;
+
+  constructor(private readonly modalService: ModalService) {}
 
   ngOnInit(): void {
     this.startCarousel();
   }
+
   get imageStyle() {
     return {
       'object-fit': 'cover',
@@ -33,8 +25,8 @@ export class HomeCarousselComponent {
     };
   }
 
-  startCarousel(): void {
-    const interval = setInterval(() => {
+  public startCarousel(): void {
+    setInterval(() => {
       this.currentImages = [
         this.images[this.currentIndex],
         this.images[(this.currentIndex + 1) % this.images.length],
@@ -42,10 +34,9 @@ export class HomeCarousselComponent {
       ];
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
     }, 3000);
+  }
 
-    // // Clear the interval when component is destroyed
-    // setTimeout(() => {
-    //   clearInterval(interval);
-    // }, (this.images.length + 2) * 3000); // Clear interval after all images have been shown
+  public showImage(id: number): void {
+    this.modalService.visible.next(id)
   }
 }

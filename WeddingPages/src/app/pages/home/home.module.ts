@@ -8,8 +8,7 @@ import { HomeCarousselComponent } from './components/home-caroussel/home-carouss
 import { HomeMessagesLinkComponent } from './components/home-messages-link/home-messages-link.component';
 import { HomeRecentPhotosComponent } from './components/home-recent-photos/home-recent-photos.component';
 import { HomeRemainingCountdownComponent } from './components/home-remaining-countdown/home-remaining-countdown.component';
-
-
+import { ModalModule } from 'src/app/components/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,7 @@ import { HomeRemainingCountdownComponent } from './components/home-remaining-cou
   imports: [
     CommonModule,
     SlickCarouselModule,
-
+    ModalModule
   ]
 })
 export class HomeModule { }

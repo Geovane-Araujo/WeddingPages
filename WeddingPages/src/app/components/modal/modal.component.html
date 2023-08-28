@@ -1,0 +1,3 @@
+<div class="container" *ngIf="modalService.visible.asObservable() | async">
+    <div class="content">{{ modalService.visible.asObservable() | async}}</div>
+</div>

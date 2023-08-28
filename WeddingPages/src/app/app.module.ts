@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MusicPlayerComponent } from './components/music-player/music-player.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { LoagindScreenComponent } from './components/loagind-screen/loagind-screen.component';
+import { ModalModule } from './components/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoagindScreenComponent } from './components/loagind-screen/loagind-scre
     AttendanceModule,
     GiftsModule,
     HomeModule,
-    MessagesModule
+    MessagesModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

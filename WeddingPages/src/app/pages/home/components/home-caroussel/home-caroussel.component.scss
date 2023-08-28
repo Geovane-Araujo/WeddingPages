@@ -37,8 +37,8 @@
   }
 
   img {
-    transform: scale(1); // Escala completa para o slide ativo
     transform: scale(0.8);
+    cursor: pointer;
     perspective: 6000px;
     width: 500px;
     height: 100%;
