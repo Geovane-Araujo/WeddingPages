@@ -14,6 +14,7 @@ import { MusicPlayerComponent } from './components/music-player/music-player.com
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { LoagindScreenComponent } from './components/loagind-screen/loagind-screen.component';
 import { ModalModule } from './components/modal/modal.module';
+import { MenuMobileComponent } from './components/header/menu-mobile/menu-mobile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ModalModule } from './components/modal/modal.module';
     FooterComponent,
     MusicPlayerComponent,
     DropdownComponent,
-    LoagindScreenComponent
+    LoagindScreenComponent,
+    MenuMobileComponent
   ],
   imports: [
     BrowserModule,

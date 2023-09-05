@@ -43,8 +43,38 @@ $secondary-color: #333;
 
 .show-background-header {
   background-color: white;
+  color: #007bff;
+}
 
-    color: #007bff;
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 65px;
+    padding: 0 16px;
 
+    .logo {
+      font-size: 28px;
+    }
 
+    .menu {
+      display: none;
+    }
+
+    .menu-mobile {
+      color: black;
+      
+      .menu-mobile-content {
+        border-top: 1px solid var(--base-color);
+        left: 2px;
+        margin-top: 48px;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .menu-mobile {
+    display: none;
+  }
 }

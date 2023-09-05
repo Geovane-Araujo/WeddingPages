@@ -1,0 +1,14 @@
+.container {
+    margin-left: 16px;
+
+    h1 {
+        color: var(--text-general-color);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    
+    p {
+        color: var(--base-color);
+        margin-left: 8px;
+    }
+}
