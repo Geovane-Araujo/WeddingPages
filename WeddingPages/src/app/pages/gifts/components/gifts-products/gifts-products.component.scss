@@ -13,13 +13,13 @@
         width: 1110px;
         
         span {
-            color: #676d6a;
+            color: var(--text-general-color);
             font-weight: bolder;
         }
 
         .order-value {
             border: 1px solid var(--base-color);
-            color: #676d6a; 
+            color: var(--text-general-color); 
             cursor: pointer;
             display: grid;
             place-items: center;
