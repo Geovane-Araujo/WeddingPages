@@ -1,7 +1,28 @@
-<p>gifts-products works!</p>
-Ordenar por: Maior Preço Menor Preço
+<div class="container-order">
+    <div class="order">
+        <span>Ordenar por: </span>
+        <label [class.selected]="radioValueHigh.checked" for="order-value-high" class="order-value">
+            Maior Preço
+            <input #radioValueHigh type="radio" id="order-value-high" name="order-value" value="high" (change)="reorderProducts('value', 'growing')">
+        </label>
+        <label [class.selected]="radioValueLow.checked" for="order-value-low" class="order-value">
+            Menor Preço
+            <input #radioValueLow type="radio" id="order-value-low" name="order-value" value="low" (change)="reorderProducts('value', 'descending')">
+        </label>
+    </div>
+</div>
 
-Água de Coco R$45.00
+<div class="container">
+    <div class="content">
+        <ng-container *ngFor="let gift of giftList">
+            <app-gifts-product [image]="gift.image" [description]="gift.description" [value]="gift.value" />
+        </ng-container>
+    </div>
+</div>
+
+
+
+<!-- Água de Coco R$45.00
 Brinde para comemoração R$110.00
 Diária ao pôr do Sol R$1550.00
 Hospedagem Lua de Mel R$4200.00
@@ -21,4 +42,4 @@ Descanso apreciando o pôr do Sol R$100.00
 Um dia com Pé na areia R$150.00
 Um drink na NoiteR$100.00
 Corrida na lua de mel R$550.00
-Noite de Rock R$458.00
+Noite de Rock R$458.00 -->

@@ -1,0 +1,46 @@
+.container {
+    background-color: #FAFAF6;
+    display: flex;
+    flex-direction: column;
+    height: 515px;
+    padding: 40px 19px;
+    width: 255px;
+    margin-bottom: 32px;
+
+    .content-image {
+        display: flex;
+        height: 50%;
+        justify-content: center;
+
+        img {
+            height: 215px;
+            width: 215px;
+        }
+    }
+
+    .content-description {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        justify-content: space-between;
+
+        span {
+            max-width: 215px;
+            text-align: center;
+        }
+
+        span.price {
+            font-weight: bolder;
+        }
+
+        button {
+            background-color: var(--base-color);
+            border: none;
+            color: white;
+            height: 52px;
+            text-transform: uppercase;
+            width: 147px;
+        }
+    }
+}
