@@ -1,8 +1,9 @@
 <header class="header" [ngClass]="{ 'show-background-header': headerService.positionWindow > 0 }">
-  <div class="logo">
+  <div class="navbar">
     <a href="/">S&M</a>
+    <svg *ngIf="isMobile" (click)="showMenuMobile = !showMenuMobile" clip-rule="evenodd" height="28" width="28" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
   </div>
-  <nav class="menu">
+  <nav class="menu" *ngIf="!isMobile">
     <div class="dropdown">
       <ng-container *ngFor="let menu of dropdownMenus">
         <app-dropdown
@@ -12,8 +13,7 @@
       </ng-container>
     </div>
   </nav>
-  <nav class="menu-mobile">
-    <svg clip-rule="evenodd" height="28" width="28" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 16.75c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm0-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
-    <app-menu-mobile class="menu-mobile-content"></app-menu-mobile>
+  <nav class="menu-mobile" *ngIf="isMobile">
+    <app-menu-mobile *ngIf="showMenuMobile" class="menu-mobile-content"></app-menu-mobile>
   </nav>
 </header>

@@ -7,14 +7,10 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  public isMobile: boolean;
+  public showMenuMobile: boolean;
 
-constructor(public readonly headerService: HeaderService) {
-
-}
-
-  @HostListener('window:scroll', ['$event'])
-  private onScroll($event: Event) {
-    this.headerService.positionWindow = window.scrollY;
+  constructor(public readonly headerService: HeaderService) {
 
   }
 
@@ -68,4 +64,14 @@ constructor(public readonly headerService: HeaderService) {
       ]
     }
   ];
+
+  @HostListener('window:scroll', ['$event'])
+  private onScroll($event: Event) {
+    this.headerService.positionWindow = window.scrollY;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  private onResize($event: any) {
+    this.isMobile = $event.target.outerWidth <= 768;
+  }
 }
