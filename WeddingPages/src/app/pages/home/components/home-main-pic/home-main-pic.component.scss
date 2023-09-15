@@ -105,4 +105,28 @@
     .hero-container {
         padding-top: 65px;
     }
+
+    .date-marker {
+        font-size: 100px;
+    }
+    
+    .couple-names-overlay {
+        font-size: 20px;
+    }
+
+    .event-overlay {
+        font-size: 12px;
+    }
+
+    .event-title-overlay {
+        bottom: 48px;
+        left: -36px;
+        transform: rotateZ(-90deg);
+    }
+    
+    .event-date-overlay {
+        right: -18px;
+        top: 96px;
+        transform: rotateZ(90deg);
+    }
 }

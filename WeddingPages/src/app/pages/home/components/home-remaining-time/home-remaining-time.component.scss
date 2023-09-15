@@ -44,10 +44,6 @@
     box-sizing: border-box;
 }
 
-
-
-
-
 .page-title {
     width: 100%;
     display: flex;
@@ -57,13 +53,14 @@
 }
 
 .spacer--medium {
-    width: 100%;
+    width: 100vw;
     height: 80px;
 }
 
 .title {
-    width: 100%;
+    box-sizing: border-box;
     padding: 20px 15px;
+    width: 100%;
 }
 
 .text-title {
@@ -80,10 +77,11 @@
 }
 
 .subtitle {
-    width: 100%;
+    width: 100vw;
     min-height: 70px;
     height: 100%;
     padding: 20px 15px;
+    box-sizing: border-box;
 }
 
 .text-subtitle {
@@ -99,4 +97,22 @@
     text-transform: uppercase;
     max-width: 1110px;
     margin: 0px auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .countdown {
+        padding: 20px 0;
+    }
+    
+    .countdown__title {
+        font-size: 18px;
+    }
+
+    .spacer--medium {
+        height: 20px;
+    }
+
+    .text-title {
+        font-size: 18px;
+    }
 }

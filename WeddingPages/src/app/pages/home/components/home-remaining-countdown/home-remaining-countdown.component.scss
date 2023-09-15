@@ -20,3 +20,21 @@
         font-size: 35px;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .countdown {
+        
+        div {
+            margin: 0px;
+            height: 70px;
+            width: 70px;
+        }
+
+        .countdown-number {
+            font-size: 25px;
+        }
+        .countdown-text {
+            font-size: 11px;
+        }
+    }
+}
