@@ -3,7 +3,7 @@
     justify-content: center;
     margin-bottom: 80px;
     width: 100%;
-    
+
     .order {
         background-color: #FAFAF6;
         align-items: center;
@@ -11,7 +11,7 @@
         height: 136px;
         justify-content: center;
         width: 1110px;
-        
+
         span {
             color: var(--text-general-color);
             font-weight: bolder;
@@ -19,7 +19,7 @@
 
         .order-value {
             border: 1px solid var(--base-color);
-            color: var(--text-general-color); 
+            color: var(--text-general-color);
             cursor: pointer;
             display: grid;
             place-items: center;
