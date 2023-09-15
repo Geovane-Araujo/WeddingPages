@@ -1,20 +1,22 @@
-/* home-main-pic.component.scss */
-
 .hero-container {
     position: relative;
     width: 100%;
-    height: 150vh;
+    height: 100vh;
     max-height: calc(69.25vw + 62px);
-    display: flex;
-
 }
 
 .content-section {
     width: 100%;
     height: 100%;
-    background: var(--main);
-    flex: 1 1 0%;
     position: relative;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    background: url('../../../../../../src/assets/images/3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .floating-box {
@@ -27,51 +29,31 @@
     z-index: 10;
 }
 
-// .image-
-.background-image {
-    width: 100%;
-    height: 100%;
-    background: url('../../../../../../src/assets/images/3.jpeg') center center / cover no-repeat;
-}
-
-
-.event-title-overlay {
+.event-overlay {
     font-family: var(--base-font-family);
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 32px;
     font-stretch: normal;
     font-style: normal;
     line-height: 2;
     letter-spacing: 2px;
     color: white;
     position: absolute;
-    bottom: 94px;
-    transform: rotateZ(-90deg);
-    pointer-events: none;
     text-transform: uppercase;
-    z-index: 25;
+    z-index: 2;
+}
+
+.event-title-overlay {
+    bottom: 94px;
     left: -52px;
+    transform: rotateZ(-90deg);
 }
 
 .event-date-overlay {
-    font-family: var(--base-font-family);
-    font-size: 32px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 2;
-    letter-spacing: 2px;
-    color: white;
-    position: absolute;
     right: -40px;
     top: 465px;
     transform: rotateZ(90deg);
-    pointer-events: none;
-    z-index: 80;
-    margin-block-start: 0;
 }
 
-// .co
 .date-marker {
     position: absolute;
     width: 100%;
@@ -80,7 +62,7 @@
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 15;
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
     font-family: DINCondensed-Bold;
     font-size: 320px;
     font-weight: 900;
@@ -120,5 +102,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    
+    .hero-container {
+        padding-top: 65px;
+    }
 }
