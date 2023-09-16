@@ -45,3 +45,31 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        box-sizing: border-box;
+        height: 240px;
+        padding: 16px 8px;
+        position: relative;
+        width: 100%;
+
+        .content-image {
+            height: 100%;
+            justify-content: flex-start;
+            width: 100%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .content-description {
+            height: initial;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
