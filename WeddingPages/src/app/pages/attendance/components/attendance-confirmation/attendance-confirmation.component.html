@@ -4,23 +4,25 @@
     </div>
 
     <form class="box-form">
-        <app-input idFor="fullname" label="Nome Completo*"></app-input>
+        <app-input idFor="fullname" label="Nome Completo *"></app-input>
 
         <div class="attendance">
             Você irá ao evento?
-            <label for="attendance-yes">
-                <input type="radio">
-                Sim
-            </label>
-            <label for="attendance-no">
-                <input type="radio">
-                Não
-            </label>
+            <div class="options">
+                <label for="attendance-yes">
+                    <input type="radio" id="attendance-yes" name="attend">
+                    Sim
+                </label>
+                <label for="attendance-no">
+                    <input type="radio" id="attendance-no" name="attend">
+                    Não
+                </label>
+            </div>
         </div>
 
-        <app-input idFor="phone" label="Telefone*"></app-input>
+        <app-input idFor="phone" label="Telefone *"></app-input>
 
-        <app-input idFor="email" label="Email*"></app-input>
+        <app-input idFor="email" label="Email *"></app-input>
 
         <h2>Quantos acompanhantes?</h2>
         <span>Acompanhantes</span>

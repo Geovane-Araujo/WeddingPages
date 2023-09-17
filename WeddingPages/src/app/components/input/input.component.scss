@@ -1,11 +1,16 @@
 .container {
-    border: 1px solid black;
+    border: 1px solid #d0cfc9;
+    box-sizing: border-box;
+    color: rgb(34, 48, 87);
     display: block;
-    padding: 8px;  
+    font-size: 14px;
+    height: 56px;
+    margin: 24px 0;
+    padding: 12px;  
     
     label {        
         display: block;
-        transition: 0.2s all;
+        transition: 0.1s all;
         transform: translateY(10px);    
     }
 
@@ -14,11 +19,16 @@
         outline: none;
     }
 
-    &:focus-within label {
-        transform: translateY(0);    
+    &:focus-within {
+        border: 1px solid var(--base-color);
     }
 
+    &:focus-within label {
+        text-transform: uppercase;
+        transform: translateY(-6px);    
+    }    
+
     .input-filled {
-        transform: translateY(0); 
+        transform: translateY(-6px); 
     }
 }

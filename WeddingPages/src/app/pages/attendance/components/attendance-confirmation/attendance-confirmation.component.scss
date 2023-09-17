@@ -2,6 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .box-form {
+        width: 350px;
+
+        .attendance {
+            display: flex;
+            justify-content: space-between;
+
+            .options {
+
+                label {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 // .container {
