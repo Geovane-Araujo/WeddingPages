@@ -52,16 +52,6 @@ export class HeaderComponent {
           path: "attendance"
         }
       ]
-    },
-    {
-      dropdownTitle: "Idiomas",
-      dropdownId: "languages",
-      dropdownContent: [
-        {
-          title: "Lista de Presentes",
-          path: "gifts"
-        }
-      ]
     }
   ];
 
