@@ -24,7 +24,7 @@ import { MenuMobileComponent } from './components/header/menu-mobile/menu-mobile
     MusicPlayerComponent,
     DropdownComponent,
     LoagindScreenComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
   ],
   imports: [
     BrowserModule,
