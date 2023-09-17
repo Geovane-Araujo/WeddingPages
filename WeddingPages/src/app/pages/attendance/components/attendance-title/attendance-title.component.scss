@@ -1,121 +1,50 @@
 .page-title {
     width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    background: rgb(255, 255, 255);
-    content: "";
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 2s ease-out 1s, z-index 2s step-end 0s;
-}
-
-.decorative-divider {
-    opacity: 0;
-    animation: 1.4s ease-in 0s infinite normal none running kwWiAt;
-}
-.decorative-divider-icon {
-
-        opacity: 0;
-    animation: 1.4s ease-in 0s infinite normal none running kwWiAt;    width: 100%;
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
 }
-
+.spacer--medium {
+    width: 100%;
+    height: 80px;
+}
 
 .title {
-
+    width: 100%;
+    padding: 20px 15px;
+}
+.text-title {
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 4px;
+    text-align: center;
+    color: var(--title-text-color);
+    font-family: var(--title-font-family);
+    text-transform: uppercase;
+    line-height: 30px;
 }
 
-.subtitle {}
+.subtitle {
+    width: 100%;
+    min-height: 70px;
+    height: 100%;
+    padding: 20px 15px;
+}
 
-.text-subtitle {}
-
-.decorative.divider {}
-
-.decorative-divider-icon {}
-
-.spacer--medium {}
-
-.container {}
-
-.container-title {}
-
-.message-box {}
-
-.box-form {}
-
-.box-form {}
-
-.text-inpu {}
-
-.input-text-name {}
-
-.input-text-label {}
-
-.attendance-box {}
-
-.attendance-form {}
-
-.attendance-text {}
-
-.confirm-attendance {}
-
-.selector {}
-
-.radio {}
-
-.radio__icon {}
-
-.telephone-container {}
-
-.telephone-box {}
-
-.flags-container {}
-
-.flags {}
-
-.flags-arow {}
-
-.telephone-input {}
-
-.telephone-input-text {}
-
-.telephone-labe {}
-
-.email-container {}
-
-.email-text-input {}
-
-.email-text-input__input0 {}
-
-.email-text-input__label {}
-
-.companion-container {}
-
-.companion {}
-
-.companion-box {}
-
-.companion-box-widget {}
-
-.companion-title {}
-
-.companion-companion {}
-
-.companion {}
-
-.decrease-companion {}
-
-.companion-quantity-box {}
-
-.increase_companion {}
+.text-subtitle {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: Montserrat-Medium;
+    font-style: normal;
+    line-height: 28px;
+    color: rgb(34, 48, 87);
+    text-transform: uppercase;
+    max-width: 1110px;
+    margin: 0px auto;
+}
