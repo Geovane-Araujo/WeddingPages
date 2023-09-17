@@ -24,90 +24,28 @@
 
         <app-input idFor="email" label="Email *"></app-input>
 
-        <h2>Quantos acompanhantes?</h2>
-        <span>Acompanhantes</span>
+        <div class="qnt-companion">
+            <h2 class="">Quantos acompanhantes?</h2>
+            <div class="qnt-selection">
+                <span>Acompanhantes</span>
 
-        <button>Responder</button>
+                <div class="qnt-selector">
+                    <svg (click)="removeCompanion()" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"><g fill="none" fill-rule="evenodd" transform="translate(0 .06)"><circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle><path fill="#080808" d="M4 9.5H16V10.5H4z"></path></g></svg>
+                    <span>{{ companionList.length }}</span>
+                    <svg (click)="addCompanion()" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"><g fill="none" fill-rule="evenodd" transform="translate(0 .06)"><circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle><path fill="#080808" d="M10.5 4v5.5H16v1h-5.5V16h-1v-5.5H4v-1h5.5V4h1z"></path></g></svg>
+                </div>
+            </div>
+
+            <div class="companionList">
+                <ng-container *ngFor="let companion of companionList">
+                    <app-input idFor="companion.id" label="Nome do acompanhante *"></app-input>
+                </ng-container>
+            </div>
+
+            <div class="container-button">
+                <button>Responder</button>
+            </div>
+        </div>
     </form>
 </div>
-    <!-- <div class="container">
-    <div class="container-title">
-        <h2 data-testid="EventName">Casamento</h2>
-    </div>
-    <div class="container-message-box">
-        <div data-testid="Animate" class="message-box">
-            <form novalidate="" id="widget-rsvp-8502" class="box-form">
-                <div class="form">
-                    <div class="text-input"><input id="widget-rsvp-8502-name" data-testid="rsvpV2FormName" type="text"
-                            name="name" class="input-text-name"><label for="widget-rsvp-8502-name" data-empty="true"
-                            class="input-text-label">Nome completo *</label>
-                    </div>
-                </div>
-                <div class="attendance-box">
-                    <div class="attendance-form">
-                        <p class="attendance-text">Você irá ao evento?</p>
-                        <div data-testid="ConfirmAnswer" class="confirm-attendance">
-                            <div class="radio"><input type="radio" id="widget-rsvp-8502-attend-yes" name="attend"
-                                    data-testid="rsvpV2FormAttendYes" class="selector" value="true" checked=""><span
-                                    class="radio__icon"></span></div>
-                            <label for="widget-rsvp-8502-attend-yes">Sim</label>
-                            <div class="radio"><input type="radio" id="widget-rsvp-8502-attend-no" name="attend"
-                                    data-testid="rsvpV2FormAttendNo" class="selector" value="false"><span
-                                    class="radio__icon"></span></div><label for="widget-rsvp-8502-attend-no">Não</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="telephone-container">
-                    <div class="telephone-box">
-                        <div class="telephone-input"><input id="widget-rsvp-8502-phone" type="tel" required=""
-                                name="phone" data-testid="rsvpV2FormPhone" class="telephone-input-text"
-                                autocomplete="tel" value=""><label for="widget-rsvp-8502-phone"
-                                class="telephone-label">Telefone*</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="email-container">
-                    <div class="email-text-input"><input id="widget-rsvp-8502-email" data-testid="rsvpV2FormEmail"
-                            type="email" name="email" class="email-text-input__input0"><label
-                            for="widget-rsvp-8502-email" data-empty="true" class="email-text-input__label">E-mail
-                            *</label></div>
-                </div>
-                <div data-testid="rsvpV2Animate" class="companion-container">
-                    <div name="guests" class="companion">
-                        <h3 data-testid="rsvpV2AuthForm">Quantos acompanhantes?</h3>
-                        <div class="companion-box">
-                            <div class="companion-box-widget">
-                                <div class="companion-title"><span data-testid="rsvpV2GuestName">Acompanhantes</span>
-                                </div>
-                                <div class="companion-companion"><button disabled data-testid="rsvpV2GuestDecrease"
-                                        class="decrease-companion"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                            height="21" viewBox="0 0 20 21">
-                                            <g fill="none" fill-rule="evenodd" transform="translate(0 .06)">
-                                                <circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle>
-                                                <path fill="#080808" d="M4 9.5H16V10.5H4z"></path>
-                                            </g>
-                                        </svg></button>
-                                    <div data-testid="rsvpV2GuestQuantity" class="companion-quantity-box">0
-                                    </div><button data-testid="rsvpV2GuestIncrease" class="increase-companion"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="20" height="21"
-                                            viewBox="0 0 20 21">
-                                            <g fill="none" fill-rule="evenodd" transform="translate(0 .06)">
-                                                <circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle>
-                                                <path fill="#080808" d="M10.5 4v5.5H16v1h-5.5V16h-1v-5.5H4v-1h5.5V4h1z">
-                                                </path>
-                                            </g>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="submit-answer"><button data-testid="rsvpV2FormSubmitButton" class="submit-button--primary"
-                        type="submit" style="position: relative; overflow: hidden;">
-                        <div class="submit"></div><span class="submit-text">Responder</span>
-                    </button></div>
-            </form>
-        </div>
-    </div>
-</div> -->
+    
