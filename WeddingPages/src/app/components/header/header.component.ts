@@ -74,8 +74,10 @@ export class HeaderComponent {
     this.headerService.positionWindow = window.scrollY;
 
     const location = window.location.pathname;
+    const headerElement = document.querySelector(".header") as HTMLElement;
     if(location === "/") {
       this.headerService.positionWindow = window.scrollY;
+      headerElement.classList.add("with-border");
     } else {
       this.headerService.positionWindow = 1;
     }

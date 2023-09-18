@@ -15,11 +15,14 @@ $secondary-color: #333;
   transition: all 1s;
   border-bottom: 1px solid var(--base-color);
 }
+.header.with-border {
+  border-bottom: none;
+}
 
 .navbar {
   font-size: 35px;
   font-family: Montserrat-Medium;
-  
+
   a {
     text-decoration: none;
   }
