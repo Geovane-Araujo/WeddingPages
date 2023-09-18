@@ -4,5 +4,5 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class ModalQrCodeService {
-  public readonly visible = signal<boolean>(false);
+  public readonly visible = signal<boolean>(true);
 }

@@ -22,12 +22,30 @@ $size-comment-area: 350px;
     }
 
     .content {
+        padding: 16px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        color: var(--base-color);
+        flex-direction: column;
         background-color: #fff;
-        border: 2px solid black;
-        height: calc(100% - (2 * $margin-modal));
-        width: calc(100% - (2 * $margin-modal));        
+        border: 1px solid var(--base-color);
+        box-shadow: 2px 2px 4px var(--base-color);
+        height: 600px;
+        width: 600px;        
         display: flex;
         position: relative;
+        text-align: center;
         z-index: 10;
+
+        button {
+            cursor: pointer;
+                background-color: var(--base-color);
+                border: none;
+                color: white;
+                height: 52px;
+                text-transform: uppercase;
+                width: 147px;
+        }
     }
 }

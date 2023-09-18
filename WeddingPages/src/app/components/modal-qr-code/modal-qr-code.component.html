@@ -1,6 +1,9 @@
 <div class="container" *ngIf="modalQrCodeService.visible()">
     <div class="background" (click)="hideModal()"></div>
     <div class="content">
-        
+        <h1>Faça um pix do valor do presente ou parte do valor</h1>
+        <img src="../../../assets/images/qrcode.jpg" width="300px" alt="">
+
+        <button (click)="copyQrCode()">Copiar código QR</button>
     </div>
 </div>
