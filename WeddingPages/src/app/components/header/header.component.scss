@@ -18,6 +18,10 @@ $secondary-color: #333;
 .navbar {
   font-size: 35px;
   font-family: Montserrat-Medium;
+  
+  a {
+    text-decoration: none;
+  }
 }
 
 .dropdown {
