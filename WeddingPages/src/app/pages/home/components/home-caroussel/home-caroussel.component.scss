@@ -63,15 +63,21 @@
     place-items: inherit;
   }
 
-  .carousel-container {
-    transform: translateX(-10px);
+  .carousel-container {    
+    width: 100%;
+    transform: translateX(0) translateY(-172px);
   }
 
-  .carousel-item {
-    width: 30%;
+  .carousel-item:nth-child(1) {
+    width: 100%;
 
     img {
-      width: 200px;
+      width: 100%;
     }
   }
+
+  .carousel-item:nth-child(2),
+  .carousel-item:nth-child(3) {
+    display: none;
+  } 
 }
