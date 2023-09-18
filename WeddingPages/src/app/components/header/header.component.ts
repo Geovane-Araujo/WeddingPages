@@ -8,7 +8,6 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent {
   public isMobile: boolean;
-  public showMenuMobile: boolean;
 
   constructor(public readonly headerService: HeaderService) {
 
@@ -58,6 +57,11 @@ export class HeaderComponent {
   @HostListener('window:scroll', ['$event'])
   private onScroll($event: Event) {
     this.headerService.positionWindow = window.scrollY;
+  }
+
+  @HostListener('window:load', ['$event'])
+  private onLoad($event: any) {
+    this.isMobile = window.innerWidth <= 768;
   }
 
   @HostListener('window:resize', ['$event'])

@@ -1,16 +1,16 @@
 <div class="container">
     <div class="pages">
         <h1>Páginas</h1>
-        <p routerLink="/">Página inicial</p>
-        <p routerLink="about">Nossa história</p>
-        <p routerLink="messages">Mensagens</p>
+        <p routerLink="/" (click)="hiddenMenu()">Página inicial</p>
+        <p routerLink="about" (click)="hiddenMenu()">Nossa história</p>
+        <p routerLink="messages" (click)="hiddenMenu()">Mensagens</p>
     </div>
     <div class="gifts">
         <h1>Presentes</h1>
-        <p routerLink="gifts">Lista de presentes</p>
+        <p routerLink="gifts" (click)="hiddenMenu()">Lista de presentes</p>
     </div>
     <div class="present">
         <h1>Confirmar presença</h1>
-        <p routerLink="attendance">Casamento</p>
+        <p routerLink="attendance" (click)="hiddenMenu()">Casamento</p>
     </div>
 </div>

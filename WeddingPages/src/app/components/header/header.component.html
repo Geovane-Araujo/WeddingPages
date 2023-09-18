@@ -1,7 +1,7 @@
 <header class="header" [ngClass]="{ 'show-background-header': headerService.positionWindow > 0 }">
   <div class="navbar">
     <a href="/">S&M</a>
-    <svg *ngIf="isMobile" (click)="showMenuMobile = !showMenuMobile" clip-rule="evenodd" height="28" width="28"
+    <svg *ngIf="isMobile" (click)="headerService.showMenuMobile = !headerService.showMenuMobile" clip-rule="evenodd" height="28" width="28"
       fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg">
       <path
@@ -18,6 +18,6 @@
     </div>
   </nav>
   <nav class="menu-mobile" *ngIf="isMobile">
-    <app-menu-mobile *ngIf="showMenuMobile" class="menu-mobile-content"></app-menu-mobile>
+    <app-menu-mobile *ngIf="headerService.showMenuMobile" class="menu-mobile-content"></app-menu-mobile>
   </nav>
 </header>

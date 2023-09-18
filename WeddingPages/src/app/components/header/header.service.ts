@@ -11,6 +11,7 @@ export class HeaderService {
 
   private _headerSelector = new BehaviorSubject<any>(null);
   public positionWindow: number;
+  public showMenuMobile: boolean;
 
   constructor() {
   }
