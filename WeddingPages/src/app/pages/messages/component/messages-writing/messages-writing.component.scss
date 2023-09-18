@@ -10,91 +10,22 @@
             display: flex;
             justify-content: space-between;
 
-            .options {
-                display: flex;
 
-                label {
-                    cursor: pointer;
-                    display: flex;
-                    margin: 0 8px;
-                }
-
-                label::before {
-                    content: "";
-                    display: block;
-                    box-sizing: border-box;
-                    border: 1px solid var(--base-color);
-                    border-radius: 100%;
-                    height: 16px;
-                    margin-right: 4px;
-                    width: 16px;
-                }
-                
-                label:has(input:checked)::after {
-                    content: "";
-                    display: block;
-                    box-sizing: border-box;
-                    background-color: var(--base-color);
-                    border-radius: 100%;
-                    height: 8px;
-                    width: 8px;
-                    position: absolute;
-                    transform: translate(4px, 4px);  
-                }  
-                
-                input {
-                    display: none;
-                }
-            }  
         }
+        .container-button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 36px 0;
 
-        .qnt-companion {
-
-
-            .qnt-selection {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                .qnt-selector {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-
-                    svg:hover {
-                        stroke: var(--base-color);
-                    }
-
-                    span {
-                        border: 1px solid #d0cfc9;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        box-sizing: border-box;
-                        margin: 0 8px;
-                        width: 45px;
-                        height: 45px;
-                        font-size: 14px;
-                    }
-                }
-
+            button {
+                background-color: var(--base-color);
+                border: none;
+                color: white;
+                height: 52px;
+                text-transform: uppercase;
+                width: 147px;
             }
-
-            .container-button {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                margin: 36px 0;
-                button {
-                    background-color: var(--base-color);
-                    border: none;
-                    color: white;
-                    height: 52px;
-                    text-transform: uppercase;
-                    width: 147px;
-                }
-            }            
         }
     }
 }
-

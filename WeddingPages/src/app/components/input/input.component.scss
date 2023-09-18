@@ -6,17 +6,19 @@
     font-size: 14px;
     height: 56px;
     margin: 24px 0;
-    padding: 12px;  
-    
-    label {        
+    padding: 5px;
+
+
+    label {
         display: block;
         transition: 0.1s all;
-        transform: translateY(10px);    
+        transform: translateY(10px);
     }
 
     input, input:focus {
         border: none;
         outline: none;
+        width: 325px;
     }
 
     &:focus-within {
@@ -25,10 +27,10 @@
 
     &:focus-within label {
         text-transform: uppercase;
-        transform: translateY(-6px);    
-    }    
+        transform: translateY(-6px);
+    }
 
     .input-filled {
-        transform: translateY(-6px); 
+        transform: translateY(-6px);
     }
 }
