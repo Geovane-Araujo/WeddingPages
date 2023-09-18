@@ -13,6 +13,7 @@ $secondary-color: #333;
   padding: 1rem 6rem;
   box-sizing: border-box;
   transition: all 1s;
+  border-bottom: 1px solid var(--base-color);
 }
 
 .navbar {
@@ -30,7 +31,7 @@ $secondary-color: #333;
 
 .show-background-header {
   background-color: white;
-  color: #007bff;
+  color: var(--base-color);
 }
 
 @media only screen and (max-width: 768px) {

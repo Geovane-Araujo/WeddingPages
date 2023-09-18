@@ -56,16 +56,28 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', ['$event'])
   private onScroll($event: Event) {
-    this.headerService.positionWindow = window.scrollY;
+    this.setHeaderConfig();
   }
 
   @HostListener('window:load', ['$event'])
   private onLoad($event: any) {
     this.isMobile = window.innerWidth <= 768;
+    this.setHeaderConfig();
   }
 
   @HostListener('window:resize', ['$event'])
   private onResize($event: any) {
     this.isMobile = $event.target.outerWidth <= 768;
+  }
+
+  private setHeaderConfig(): void {
+    this.headerService.positionWindow = window.scrollY;
+
+    const location = window.location.pathname;
+    if(location === "/") {
+      this.headerService.positionWindow = window.scrollY;
+    } else {
+      this.headerService.positionWindow = 1;
+    }
   }
 }
