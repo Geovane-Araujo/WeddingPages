@@ -6,6 +6,7 @@ import { MessagesWritingComponent } from './component/messages-writing/messages-
 import { MessagesReceivedComponent } from './component/messages-received/messages-received.component';
 
 import { MessagesModule as MessagesModule2 } from '../../components/messages/messages.module';
+import { InputModule } from 'src/app/components/input/input.module';
 
 
 
@@ -18,7 +19,8 @@ import { MessagesModule as MessagesModule2 } from '../../components/messages/mes
   ],
   imports: [
     CommonModule,
-    MessagesModule2
+    MessagesModule2,
+    InputModule
   ]
 })
 export class MessagesModule { }

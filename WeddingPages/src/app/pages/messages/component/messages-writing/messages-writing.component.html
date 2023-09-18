@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <div class="sc-jEUrFJ iwsdwa message-form">
         <form class="sc-dNUOEE dlvKMM">
             <div class="sc-gqplIC GvhPo">
@@ -60,8 +60,43 @@
             </div><button type="submit" class="sc-nTsCk hAExkd button button--primary">Enviar mensagem</button>
         </form>
     </div>
-    <div class="sc-NGtlf dzNVND messages">
-        <div class="received-messages">Mensagens recebidas</div>
-        <app-messages-list [messages]="messages"></app-messages-list>
+</div> -->
+
+<div class="container">
+    <div class="container-title">
+        <h2 data-testid="EventName">Casamento</h2>
     </div>
+    
+    <form class="box-form">
+        <app-input idFor="fullname" label="Nome Completo *"></app-input>
+
+        <div class="attendance">
+            Você irá ao evento?
+            <div class="options">
+                <label for="attendance-yes">
+                    <input type="radio" class="radio-input" id="attendance-yes" name="attend">
+                    Sim
+                </label>
+                <label for="attendance-no">
+                    <input type="radio" class="radio-input" id="attendance-no" name="attend">
+                    Não
+                </label>
+            </div>
+        </div>
+        
+        <app-input idFor="phone" label="Telefone *"></app-input>
+        
+        <app-input idFor="email" label="Email *"></app-input>
+        
+        <div class="qnt-companion">
+            <div class="container-button">
+                <button>Responder</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="sc-NGtlf dzNVND messages">
+    <div class="received-messages">Mensagens recebidas</div>
+    <app-messages-list [messages]="messages"></app-messages-list>
 </div>

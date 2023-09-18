@@ -3,19 +3,19 @@ import { CommonModule } from '@angular/common';
 import { AttendanceComponent } from './attendance.component';
 import { AttendanceTitleComponent } from './components/attendance-title/attendance-title.component';
 import { AttendanceConfirmationComponent } from './components/attendance-confirmation/attendance-confirmation.component';
-import { InputComponent } from 'src/app/components/input/input.component';
 import { FormsModule } from '@angular/forms';
+import { InputModule } from 'src/app/components/input/input.module';
 
 @NgModule({
   declarations: [
     AttendanceComponent,
     AttendanceTitleComponent,
-    AttendanceConfirmationComponent,
-    InputComponent
+    AttendanceConfirmationComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    InputModule
   ]
 })
 export class AttendanceModule { }
