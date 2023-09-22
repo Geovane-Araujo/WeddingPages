@@ -54,11 +54,14 @@
         padding: 16px 8px;
         position: relative;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+
 
         .content-image {
-            height: 100%;
+            max-width: 100%;
+            height: 50%;
             justify-content: flex-start;
-            width: 100%;
 
             img {
                 height: 100%;
@@ -68,7 +71,10 @@
         }
 
         .content-description {
-            height: initial;
+            height: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             position: absolute;
             bottom: 0;
         }
