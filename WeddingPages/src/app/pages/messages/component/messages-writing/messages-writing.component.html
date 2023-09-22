@@ -66,33 +66,16 @@
     <div class="container-title">
         <h2 data-testid="EventName">Casamento</h2>
     </div>
-    
+
     <form class="box-form">
         <app-input idFor="fullname" label="Nome Completo *"></app-input>
+        <app-input idFor="email" label="E-mail *"></app-input>
 
-        <div class="attendance">
-            Você irá ao evento?
-            <div class="options">
-                <label for="attendance-yes">
-                    <input type="radio" class="radio-input" id="attendance-yes" name="attend">
-                    Sim
-                </label>
-                <label for="attendance-no">
-                    <input type="radio" class="radio-input" id="attendance-no" name="attend">
-                    Não
-                </label>
-            </div>
-        </div>
-        
-        <app-input idFor="phone" label="Telefone *"></app-input>
-        
-        <app-input idFor="email" label="Email *"></app-input>
-        
-        <div class="qnt-companion">
+        <app-input class="message-box" idFor="message" label="Mensagem *"></app-input>
+
             <div class="container-button">
-                <button>Responder</button>
+                <button>ENVIAR MENSAGEM</button>
             </div>
-        </div>
     </form>
 </div>
 
