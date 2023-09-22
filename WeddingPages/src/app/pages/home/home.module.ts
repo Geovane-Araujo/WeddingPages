@@ -10,6 +10,7 @@ import { HomeRecentPhotosComponent } from './components/home-recent-photos/home-
 import { HomeRemainingCountdownComponent } from './components/home-remaining-countdown/home-remaining-countdown.component';
 import { ModalModule } from 'src/app/components/modal/modal.module';
 import { RouterModule } from '@angular/router';
+import { ModalCarouselService } from 'src/app/components/modal-carousel/modal-carousel.service';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,16 @@ import { RouterModule } from '@angular/router';
     HomeCarousselComponent,
     HomeMessagesLinkComponent,
     HomeRecentPhotosComponent,
-    HomeRemainingCountdownComponent,
+    HomeRemainingCountdownComponent
   ],
   imports: [
     CommonModule,
     SlickCarouselModule,
     ModalModule,
     RouterModule
+  ],
+  providers: [
+    ModalCarouselService
   ]
 })
 export class HomeModule { }

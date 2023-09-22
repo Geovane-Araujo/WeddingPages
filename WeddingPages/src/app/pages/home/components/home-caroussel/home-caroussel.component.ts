@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { ModalCarouselService } from 'src/app/components/modal-carousel/modal-carousel.service';
 import { ModalService } from 'src/app/components/modal/modal.service';
 
 @Component({
@@ -7,11 +8,25 @@ import { ModalService } from 'src/app/components/modal/modal.service';
   styleUrls: ['./home-caroussel.component.scss']
 })
 export class HomeCarousselComponent {
-  images: number[] = [ 2, 5, 6, 7, 9, 10, 11];
-  currentImages: number[] = [];
-  currentIndex: number = 0;
+  public isMobile: boolean;
 
-  constructor(private readonly modalService: ModalService) {}
+  public images: number[] = [ 2, 5, 6, 7, 9, 10, 11];
+  public currentImages: number[] = [];
+  public currentIndex: number = 0;
+
+  @HostListener('window:load', ['$event'])
+  private onLoad($event: any) {
+    this.isMobile = window.innerWidth <= 768;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  private onResize($event: any) {
+    this.isMobile = $event.target.outerWidth <= 768;
+  }
+
+  constructor(
+    public readonly modalCarouselService: ModalCarouselService,
+    private readonly modalService: ModalService) {}
 
   ngOnInit(): void {
     this.startCarousel();
@@ -36,7 +51,20 @@ export class HomeCarousselComponent {
     }, 3000);
   }
 
+  public onClickImage(id: number): void {
+    if(this.isMobile) {
+      this.openModalCarousel(id);
+    } else {
+      this.showImage(id);
+    }
+  }
+
   public showImage(id: number): void {
     this.modalService.id.set(id)
+  }
+
+  public openModalCarousel(id: number) {
+    this.modalCarouselService.modalVisible = true;
+    this.modalCarouselService.idImage = id;
   }
 }

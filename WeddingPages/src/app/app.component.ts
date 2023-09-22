@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderService } from './components/header/header.service';
+import { ModalCarouselService } from './components/modal-carousel/modal-carousel.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,9 @@ import { HeaderService } from './components/header/header.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(public readonly headerService: HeaderService) {
+  constructor(
+    public readonly headerService: HeaderService,
+    public readonly modalCarouselService: ModalCarouselService) {
 
   }
 }

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="image-area">
+        <button class="close" (click)="modalCarouselService.modalVisible = false">X</button>
+        <img [src]="'../../../assets/images/' + modalCarouselService.idImage + '.jpeg'" alt="" />
+    </div>
+
+    <div class="info-area">
+        <span>{{ getCurrentDate() }}</span>
+
+        <div class="control-header">
+            <img src="../../../assets/images/heart.ico" alt="" width="16px" height="16px">
+            <p>0</p>
+            <img src="../../../assets/images/comment.ico" alt="" width="16px" height="16px">
+            <p>0</p>
+        </div>
+    </div>    
+
+    <div class="to-comment">
+        <p class="comment-text">Alegre o carousel-container</p>
+        <button class="comment-button">Comentar</button>
+    </div>
+
+</div>

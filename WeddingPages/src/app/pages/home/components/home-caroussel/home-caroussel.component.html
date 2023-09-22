@@ -1,7 +1,7 @@
 <div class="container">
   <div class="carousel-container">
     <div class="carousel-item" *ngFor="let image of currentImages">
-      <img [src]="'../../../assets/images/' + image + '.jpeg'" alt="Carousel Image" (click)="showImage(image)">
+      <img [src]="'../../../assets/images/' + image + '.jpeg'" alt="Carousel Image" (click)="onClickImage(image)">
     </div>
   </div>
 </div>

@@ -8,8 +8,6 @@ import { MessagesReceivedComponent } from './component/messages-received/message
 import { MessagesModule as MessagesModule2 } from '../../components/messages/messages.module';
 import { InputModule } from 'src/app/components/input/input.module';
 
-
-
 @NgModule({
   declarations: [
     MessagesComponent,

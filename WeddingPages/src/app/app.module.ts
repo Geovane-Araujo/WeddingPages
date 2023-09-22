@@ -15,6 +15,8 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { LoagindScreenComponent } from './components/loagind-screen/loagind-screen.component';
 import { ModalModule } from './components/modal/modal.module';
 import { MenuMobileComponent } from './components/header/menu-mobile/menu-mobile.component';
+import { ModalCarouselComponent } from './components/modal-carousel/modal-carousel.component';
+import { ModalCarouselService } from './components/modal-carousel/modal-carousel.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { MenuMobileComponent } from './components/header/menu-mobile/menu-mobile
     DropdownComponent,
     LoagindScreenComponent,
     MenuMobileComponent,
+    ModalCarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { MenuMobileComponent } from './components/header/menu-mobile/menu-mobile
     MessagesModule,
     ModalModule
   ],
-  providers: [],
+  providers: [ModalCarouselService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
