@@ -8,7 +8,7 @@ import { ModalService } from './modal.service';
 })
 export class ModalComponent {
   public messages = [
-    { content: "Lindo o casal" , author: "Jonas Ewerton"}
+    { message: "Lindo o casal" , author: "Jonas Ewerton"}
   ];
 
   constructor(public readonly modalService: ModalService) {}

@@ -7,18 +7,24 @@ import { MessagesReceivedComponent } from './component/messages-received/message
 
 import { MessagesModule as MessagesModule2 } from '../../components/messages/messages.module';
 import { InputModule } from 'src/app/components/input/input.module';
+import { MessagesService } from 'src/app/services/messages.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     MessagesComponent,
     MessagesSummaryComponent,
     MessagesWritingComponent,
-    MessagesReceivedComponent
+    MessagesReceivedComponent    
   ],
   imports: [
     CommonModule,
     MessagesModule2,
-    InputModule
+    InputModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    MessagesService
   ]
 })
 export class MessagesModule { }

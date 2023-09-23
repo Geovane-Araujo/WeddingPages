@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 interface IMessage {
-  content: string;
+  message: string;
   author: string;
 }
 

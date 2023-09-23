@@ -67,19 +67,19 @@
         <h2 data-testid="EventName">Casamento</h2>
     </div>
 
-    <form class="box-form">
-        <app-input idFor="fullname" label="Nome Completo *"></app-input>
-        <app-input idFor="email" label="E-mail *"></app-input>
+    <form [formGroup]="messageForm" class="box-form">
+        <app-input idFor="fullname" label="Nome Completo *" [control]="messageForm.get('author')"></app-input>
+        <app-input idFor="email" label="E-mail *" [control]="messageForm.get('email')"></app-input>
 
-        <app-input class="message-box" idFor="message" label="Mensagem *"></app-input>
+        <app-input class="message-box" idFor="message" label="Mensagem *" [control]="messageForm.get('message')"></app-input>
 
             <div class="container-button">
-                <button>ENVIAR MENSAGEM</button>
+                <button (click)="sendMessage()">ENVIAR MENSAGEM</button>
             </div>
     </form>
 </div>
 
 <div class="sc-NGtlf dzNVND messages">
     <div class="received-messages">Mensagens recebidas</div>
-    <app-messages-list [messages]="messages"></app-messages-list>
+    <app-messages-list [messages]="messageService.messages"></app-messages-list>
 </div>

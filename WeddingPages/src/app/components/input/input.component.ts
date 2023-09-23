@@ -9,5 +9,13 @@ export class InputComponent {
   @Input() label: string;
   @Input() idFor: string;
 
+  @Input() control: any;
+
   public value: string;
+
+  public onChangeValue(): void {
+    if(this.control.value !== this.value) {
+      this.control.patchValue(this.value);
+    }
+  }
 }

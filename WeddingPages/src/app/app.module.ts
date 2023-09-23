@@ -17,6 +17,8 @@ import { ModalModule } from './components/modal/modal.module';
 import { MenuMobileComponent } from './components/header/menu-mobile/menu-mobile.component';
 import { ModalCarouselComponent } from './components/modal-carousel/modal-carousel.component';
 import { ModalCarouselService } from './components/modal-carousel/modal-carousel.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { Interceptor } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,17 @@ import { ModalCarouselService } from './components/modal-carousel/modal-carousel
     GiftsModule,
     HomeModule,
     MessagesModule,
-    ModalModule
+    ModalModule,
+    HttpClientModule
   ],
-  providers: [ModalCarouselService],
+  providers: [
+    ModalCarouselService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

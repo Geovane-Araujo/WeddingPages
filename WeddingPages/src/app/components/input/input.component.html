@@ -1,4 +1,4 @@
 <div class="container">
     <label [ngClass]="{ 'input-filled': value }" [for]="idFor">{{ label }}</label>
-    <input [id]="idFor" [(ngModel)]="value" type="text">
+    <input [id]="idFor" [(ngModel)]="value" (change)="onChangeValue()" type="text">
 </div>
