@@ -3,26 +3,26 @@
         <h2 data-testid="EventName">Casamento</h2>
     </div>
 
-    <form class="box-form">
-        <app-input idFor="fullname" label="Nome Completo *"></app-input>
+    <form class="box-form"[formGroup]="attendanceForm">
+        <app-input idFor="fullname" label="Nome Completo *"[control]="attendanceForm.get('name')"></app-input>
 
         <div class="attendance">
             Você irá ao evento?
             <div class="options">
                 <label for="attendance-yes">
-                    <input type="radio" class="radio-input" id="attendance-yes" name="attend">
+                    <input type="radio" class="radio-input" id="attendance-yes" [value]=true name="attend"formControlName="confirm">
                     Sim
                 </label>
                 <label for="attendance-no">
-                    <input type="radio" class="radio-input" id="attendance-no" name="attend">
+                    <input type="radio" class="radio-input" id="attendance-no" [value]=false name="attend"formControlName="confirm">
                     Não
                 </label>
             </div>
         </div>
 
-        <app-input idFor="phone" label="Telefone *"></app-input>
+        <app-input idFor="phone" label="Telefone *" [control]="attendanceForm.get('phone')"></app-input>
 
-        <app-input idFor="email" label="Email *"></app-input>
+        <app-input idFor="email" label="Email *" [control]="attendanceForm.get('email')"></app-input>
 
         <div class="qnt-companion">
             <h2 class="">Quantos acompanhantes?</h2>
@@ -43,9 +43,8 @@
             </div>
 
             <div class="container-button">
-                <button>Responder</button>
+                <button (click)="sendConfirmation()">Responder</button>
             </div>
         </div>
     </form>
 </div>
-    

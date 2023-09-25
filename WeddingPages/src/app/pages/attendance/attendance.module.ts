@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AttendanceComponent } from './attendance.component';
 import { AttendanceTitleComponent } from './components/attendance-title/attendance-title.component';
 import { AttendanceConfirmationComponent } from './components/attendance-confirmation/attendance-confirmation.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputModule } from 'src/app/components/input/input.module';
 
 @NgModule({
@@ -15,7 +15,8 @@ import { InputModule } from 'src/app/components/input/input.module';
   imports: [
     CommonModule,
     FormsModule,
-    InputModule
+    InputModule,
+    ReactiveFormsModule
   ]
 })
 export class AttendanceModule { }
