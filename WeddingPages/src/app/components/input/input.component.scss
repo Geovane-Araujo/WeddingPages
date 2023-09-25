@@ -33,4 +33,11 @@
     .input-filled {
         transform: translateY(-6px);
     }
+    .controlValidField {
+        display: flex;
+        flex-direction: column;
+        padding-top: 17px;
+        position: absolute;
+    }
+
 }

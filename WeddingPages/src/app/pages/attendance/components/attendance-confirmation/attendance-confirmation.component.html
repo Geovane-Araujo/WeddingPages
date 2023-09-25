@@ -3,7 +3,7 @@
         <h2 data-testid="EventName">Casamento</h2>
     </div>
 
-    <form class="box-form" [formGroup]="attendanceForm">
+    <form class="box-form" [formGroup]="attendanceForm" *ngIf="!confirmationValid">
         <app-input idFor="fullname" label="Nome Completo *" [control]="attendanceForm.get('name')"></app-input>
 
         <div class="attendance">
@@ -62,4 +62,8 @@
             </div>
         </div>
     </form>
+
+    <div *ngIf="confirmationValid">
+        Confirmação realizada com sucesso!
+    </div>
 </div>

@@ -1,6 +1,6 @@
 import { AttendanceService } from './../../../../services/attendance.service';
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 interface Companion {
   id: number;
@@ -12,12 +12,13 @@ interface Companion {
   styleUrls: ['./attendance-confirmation.component.scss']
 })
 export class AttendanceConfirmationComponent {
+  public confirmationValid: Boolean=false;
   public companionList: Companion[] = [];
   public attendanceForm: FormGroup = new FormGroup({
-    name: new FormControl(null),
-    confirm: new FormControl(false),
-    phone: new FormControl(null),
-    email: new FormControl(null),
+    name: new FormControl(null, Validators.required),
+    confirm: new FormControl(false, Validators.required),
+    phone: new FormControl(null, Validators.required),
+    email: new FormControl(null, Validators.required),
     quantityCompanion: new FormControl(0),
     companion: new FormControl([])
   })
@@ -39,7 +40,9 @@ export class AttendanceConfirmationComponent {
 
   public sendConfirmation(): void {
     this.getCompanionList();
-    this.attendanceService.postAttendance(this.attendanceForm.value).subscribe(res=>console.log(res));
+    if(this.attendanceForm.valid) {
+      this.attendanceService.postAttendance(this.attendanceForm.value).subscribe(res=>this.confirmationValid=true);
+    }
   }
 
   public getCompanionList(): void {

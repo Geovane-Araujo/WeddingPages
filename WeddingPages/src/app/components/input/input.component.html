@@ -1,4 +1,5 @@
 <div class="container">
     <label [ngClass]="{ 'input-filled': value }" [for]="idFor">{{ label }}</label>
     <input [id]="idFor" [(ngModel)]="value" (change)="onChangeValue()" type="text">
+    <span class="controlValidField" *ngIf="!control.valid">Campo obrigatório</span>
 </div>
