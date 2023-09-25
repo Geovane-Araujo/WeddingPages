@@ -5,6 +5,7 @@ import { AttendanceTitleComponent } from './components/attendance-title/attendan
 import { AttendanceConfirmationComponent } from './components/attendance-confirmation/attendance-confirmation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputModule } from 'src/app/components/input/input.module';
+import { AttendanceService } from 'src/app/services/attendance.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,9 @@ import { InputModule } from 'src/app/components/input/input.module';
     FormsModule,
     InputModule,
     ReactiveFormsModule
+  ],
+  providers: [
+    AttendanceService
   ]
 })
 export class AttendanceModule { }

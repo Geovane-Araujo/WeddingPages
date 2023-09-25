@@ -3,18 +3,18 @@
         <h2 data-testid="EventName">Casamento</h2>
     </div>
 
-    <form class="box-form"[formGroup]="attendanceForm">
-        <app-input idFor="fullname" label="Nome Completo *"[control]="attendanceForm.get('name')"></app-input>
+    <form class="box-form" [formGroup]="attendanceForm">
+        <app-input idFor="fullname" label="Nome Completo *" [control]="attendanceForm.get('name')"></app-input>
 
         <div class="attendance">
             Você irá ao evento?
             <div class="options">
                 <label for="attendance-yes">
-                    <input type="radio" class="radio-input" id="attendance-yes" [value]=true name="attend"formControlName="confirm">
+                    <input type="radio" class="radio-input" id="attendance-yes" [value]=true formControlName="confirm">
                     Sim
                 </label>
                 <label for="attendance-no">
-                    <input type="radio" class="radio-input" id="attendance-no" [value]=false name="attend"formControlName="confirm">
+                    <input type="radio" class="radio-input" id="attendance-no" [value]=false formControlName="confirm">
                     Não
                 </label>
             </div>
@@ -30,15 +30,30 @@
                 <span>Acompanhantes</span>
 
                 <div class="qnt-selector">
-                    <svg (click)="removeCompanion()" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"><g fill="none" fill-rule="evenodd" transform="translate(0 .06)"><circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle><path fill="#080808" d="M4 9.5H16V10.5H4z"></path></g></svg>
+                    <svg (click)="removeCompanion()" xmlns="http://www.w3.org/2000/svg" width="20" height="21"
+                        viewBox="0 0 20 21">
+                        <g fill="none" fill-rule="evenodd" transform="translate(0 .06)">
+                            <circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle>
+                            <path fill="#080808" d="M4 9.5H16V10.5H4z"></path>
+                        </g>
+                    </svg>
                     <span>{{ companionList.length }}</span>
-                    <svg (click)="addCompanion()" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"><g fill="none" fill-rule="evenodd" transform="translate(0 .06)"><circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle><path fill="#080808" d="M10.5 4v5.5H16v1h-5.5V16h-1v-5.5H4v-1h5.5V4h1z"></path></g></svg>
+                    <svg (click)="addCompanion()" xmlns="http://www.w3.org/2000/svg" width="20" height="21"
+                        viewBox="0 0 20 21">
+                        <g fill="none" fill-rule="evenodd" transform="translate(0 .06)">
+                            <circle cx="10" cy="10" r="9.5" stroke="#E0E0E0"></circle>
+                            <path fill="#080808" d="M10.5 4v5.5H16v1h-5.5V16h-1v-5.5H4v-1h5.5V4h1z"></path>
+                        </g>
+                    </svg>
                 </div>
             </div>
 
             <div class="companionList">
                 <ng-container *ngFor="let companion of companionList">
-                    <app-input idFor="companion.id" label="Nome do acompanhante *"></app-input>
+                    <div class="companions-gk3">
+                        <app-input idFor="companion.id" label="Nome do acompanhante *"
+                            [control]="attendanceForm.get('companion')"></app-input>
+                    </div>
                 </ng-container>
             </div>
 
