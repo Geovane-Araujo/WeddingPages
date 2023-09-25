@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class Interceptor implements HttpInterceptor {
-    private readonly BASE_URL = "http://localhost:3000"
+    private readonly BASE_URL = "https://sayuriemessias.com.br/v1/api"
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const requestClone = request.clone({
