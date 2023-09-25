@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WeddingPages": {
+    "wedding-pages": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "WeddingPages:build:production"
+              "browserTarget": "wedding-pages:build:production"
             },
             "development": {
-              "browserTarget": "WeddingPages:build:development"
+              "browserTarget": "wedding-pages:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WeddingPages:build"
+            "browserTarget": "wedding-pages:build"
           }
         },
         "test": {

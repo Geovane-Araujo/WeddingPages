@@ -4,7 +4,7 @@
     <a class="dropdown-title" (click)="headerService.headerSelector=dropdownId">{{ dropdownTitle }}</a>
     <div class="dropdown-content" *ngIf="(headerService.headerSelector | async)===dropdownId">
         <div class="a-content" *ngFor="let content of dropdownContent">
-            <a [href]="content.path">{{ content.title }}</a>
+            <a [routerLink]="content.path">{{ content.title }}</a>
         </div>
     </div>
 </div>
